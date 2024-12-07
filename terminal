@@ -1,0 +1,25 @@
+# Remove existing installations
+rm -rf node_modules .next
+rm package-lock.json
+
+# Install all required dependencies
+npm install @prisma/client next-auth bcryptjs @heroicons/react @headlessui/react next axios chart.js react-chartjs-2
+npm install -D prisma @types/node @types/react @types/react-dom @types/bcryptjs tailwindcss postcss autoprefixer
+
+# Generate Prisma client
+npx prisma generate
+
+# Build for production
+npm run build
+
+# On Windows
+net start postgresql
+
+# On Mac
+brew services start postgresql
+
+# On Linux
+sudo service postgresql start
+
+psql -U postgres
+# Enter your password when prompted

@@ -1,0 +1,21 @@
+job-portal/
+├── src/
+│   ├── app/
+│   │   ├── (auth)/
+│   │   │   ├── login/
+│   │   │   └── register/
+│   │   ├── (dashboard)/
+│   │   │   ├── employer/
+│   │   │   └── seeker/
+│   │   ├── api/
+│   │   └── layout.tsx
+│   ├── components/
+│   │   ├── common/
+│   │   ├── dashboard/
+│   │   └── jobs/
+│   ├── lib/
+│   │   ├── prisma.ts
+│   │   └── auth.ts
+│   └── types/
+└── prisma/
+    └── schema.prisma 
