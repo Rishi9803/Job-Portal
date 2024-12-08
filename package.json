@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate",
     "db:push": "prisma db push",
     "db:seed": "prisma db seed"
   },
@@ -22,10 +21,10 @@
     "jsonwebtoken": "^9.0.2",
     "next": "13.5.3",
     "next-auth": "^4.23.1",
+    "prisma": "^5.3.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.2.0",
-    "ts-node": "^10.9.2"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.4",
@@ -37,11 +36,7 @@
     "eslint": "^8.50.0",
     "eslint-config-next": "13.5.3",
     "postcss": "^8.4.31",
-    "prisma": "^5.3.1",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2"
-  },
-  "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }
